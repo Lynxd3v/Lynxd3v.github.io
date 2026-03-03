@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lynxxx</title>
+    <title>Lynxxx | Developer</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
     <script>
         tailwind.config = {
             theme: {
@@ -41,6 +40,7 @@
         .glass { @apply backdrop-blur-xl bg-white/5 border border-white/10 transition-all duration-300; }
         .text-glow { text-shadow: 0 0 15px rgba(0, 210, 255, 0.5); }
         #bg-canvas { @apply fixed top-0 left-0 w-full h-full -z-10 bg-[radial-gradient(circle_at_center,_#0a1128_0%,_#030305_100%)]; }
+        .skill-card { @apply p-4 rounded-2xl glass flex flex-col items-center gap-2 hover:border-primary/50 hover:scale-105 transition-all; }
     </style>
 </head>
 <body>
@@ -49,85 +49,106 @@
 
     <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl glass rounded-full py-4 px-8 flex justify-between items-center z-50 shadow-2xl">
         <div class="font-extrabold text-primary tracking-widest text-lg italic uppercase">Lynxxx.dev</div>
-        <div class="hidden md:flex space-x-8 font-medium text-sm">
+        <div class="hidden md:flex space-x-8 font-medium text-sm text-gray-400">
             <a href="#home" class="hover:text-primary transition-colors">Home</a>
-            <a href="#about" class="hover:text-primary transition-colors">About</a>
-            <a href="#projects" class="hover:text-primary transition-colors">Work</a>
+            <a href="#skills" class="hover:text-primary transition-colors">Stack</a>
+            <a href="#projects" class="hover:text-primary transition-colors">Projektek</a>
             <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
         </div>
     </nav>
 
     <header id="home" class="h-screen flex flex-col justify-center items-center text-center px-4">
-        <div class="flex flex-col md:flex-row items-center gap-6 mb-8" data-aos="zoom-out" data-aos-duration="1000">
-            <h1 class="text-6xl md:text-9xl font-extrabold tracking-tight order-2 md:order-1 italic">
+        <div class="flex flex-col md:flex-row items-center gap-6 mb-8" data-aos="zoom-out">
+            <h1 class="text-6xl md:text-9xl font-extrabold tracking-tight italic">
                 <span class="bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent text-glow uppercase ">Lynxxx</span>
             </h1>
-            <div class="w-20 h-20 bg-cardBg border border-primary rounded-2xl flex items-center justify-center shadow-[0_0_25px_rgba(0, 210, 255, 0.3)] animate-float order-1 md:order-2">
+            <div class="w-20 h-20 bg-cardBg border border-primary rounded-2xl flex items-center justify-center animate-float">
                 <i class="fas fa-bolt text-3xl text-primary"></i>
             </div>
         </div>
         <p class="max-w-xl text-gray-400 text-lg md:text-xl mb-10" data-aos="fade-up" data-aos-delay="200">
-            Creative Full-Stack Developer & UI Enthusiast. Modern megoldások a digitális jövőnek.
+            Creative Full-Stack Developer. Modern megoldások és egyedi FiveM fejlesztések.
         </p>
         
         <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="400">
-            <a href="https://github.com/lynxd3v" target="_blank" class="flex items-center justify-center gap-3 bg-white text-black font-bold py-3 px-8 rounded-full hover:scale-110 transition-transform shadow-lg shadow-white/10">
-                <i class="fab fa-github text-xl"></i> <span>GitHub profil</span>
+            <a href="https://github.com/lynxd3v" target="_blank" class="flex items-center justify-center gap-3 bg-white text-black font-bold py-3 px-8 rounded-full hover:scale-110 transition-transform">
+                <i class="fab fa-github text-xl"></i> <span>GitHub</span>
             </a>
             <a href="#projects" class="flex items-center justify-center gap-3 bg-primary/10 border border-primary/50 text-primary font-bold py-3 px-8 rounded-full hover:bg-primary hover:text-black transition-all">
-                <i class="fas fa-code"></i> <span>Munkáim</span>
+                <i class="fas fa-code"></i> <span>Projektek</span>
             </a>
         </div>
     </header>
 
-    <section id="about" class="py-20 px-6 max-w-4xl mx-auto text-center">
-        <div class="glass p-10 rounded-[40px]" data-aos="fade-up">
-            <h2 class="text-2xl font-bold text-primary mb-4 uppercase tracking-widest">Rólam</h2>
-            <p class="text-gray-300 leading-relaxed">
-                Szia! Lynxxx vagyok, egy full-stack fejlesztő, aki imádja az elegáns kódokat és a vizuálisan lenyűgöző felületeket. 
-                Főként FiveM scriptekkel (Lua) és biztonsági automatizációkkal foglalkozom. 
-                Célom, hogy minden projektem gyors, biztonságos és felhasználóbarát legyen.
-            </p>
+    <section id="skills" class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-bold uppercase italic tracking-tighter text-primary">Technológiai Stack</h2>
+            <p class="text-gray-500 mt-2">Amikkel a mágiát készítem</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="glass p-6 rounded-[30px]" data-aos="fade-right">
+                <h3 class="text-xl font-bold mb-6 flex items-center gap-3"><i class="fas fa-layer-group text-primary"></i> Frontend</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="skill-card"><i class="fab fa-html5 text-orange-500 text-2xl"></i> <span class="text-xs">HTML</span></div>
+                    <div class="skill-card"><i class="fab fa-css3-alt text-blue-500 text-2xl"></i> <span class="text-xs">CSS</span></div>
+                    <div class="skill-card"><i class="fab fa-js text-yellow-400 text-2xl"></i> <span class="text-xs">Javascript</span></div>
+                </div>
+            </div>
+
+            <div class="glass p-6 rounded-[30px]" data-aos="fade-up">
+                <h3 class="text-xl font-bold mb-6 flex items-center gap-3"><i class="fas fa-server text-primary"></i> Backend</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="skill-card"><i class="fab fa-python text-blue-400 text-2xl"></i> <span class="text-xs">Python</span></div>
+                    <div class="skill-card"><i class="fas fa-database text-gray-400 text-2xl"></i> <span class="text-xs">SQL / MySQL</span></div>
+                </div>
+            </div>
+
+            <div class="glass p-6 rounded-[30px]" data-aos="fade-left">
+                <h3 class="text-xl font-bold mb-6 flex items-center gap-3"><i class="fas fa-gamepad text-primary"></i> Scripting</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="skill-card"><i class="fas fa-moon text-blue-300 text-2xl"></i> <span class="text-xs">Lua (FiveM)</span></div>
+                    <div class="skill-card"><i class="fas fa-shield-halved text-green-400 text-2xl"></i> <span class="text-xs">Security</span></div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="projects" class="py-24 px-6 max-w-7xl mx-auto">
         <div class="text-center mb-16" data-aos="fade-up">
             <h2 class="text-4xl font-bold inline-block relative after:content-[''] after:absolute after:-bottom-4 after:left-1/2 after:-translate-x-1/2 after:w-12 after:h-1 after:bg-primary after:rounded-full uppercase italic tracking-tighter">
-                Projektjeim
+                Projektek
             </h2>
         </div>
 
         <div class="flex flex-wrap justify-center gap-8 w-full">
-            
             <div class="glass rounded-3xl overflow-hidden group hover:-translate-y-3 hover:border-primary/40 shadow-2xl w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-[400px]" data-aos="fade-up">
                 <div class="h-48 bg-black/40 flex items-center justify-center text-6xl text-primary/30 group-hover:text-primary transition-all duration-500">
-                    <i class="fas fa-database"></i>
+                    <i class="fas fa-crosshairs"></i>
                 </div>
                 <div class="p-8">
                     <div class="flex gap-2 mb-4">
-                        <span class="text-[10px] font-bold uppercase bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full text-glow">FiveM</span>
-                        <span class="text-[10px] font-bold uppercase bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full text-glow">Lua</span>
+                        <span class="text-[10px] font-bold uppercase bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full">FiveM</span>
+                        <span class="text-[10px] font-bold uppercase bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full">Lua</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 tracking-tight text-white">ATLAS DM</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Egy egyedi DM szerver ahol azon dolgozunk hogy mindenki tisztelségesen tudjon játszani.</p>
+                    <h3 class="text-xl font-bold mb-3 tracking-tight text-white uppercase italic">ATLAS DM</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Egy egyedi DM szerver, ahol a tiszta játékmenet és a teljesítmény a prioritás.</p>
                 </div>
             </div>
 
             <div class="glass rounded-3xl overflow-hidden group hover:-translate-y-3 hover:border-primary/40 shadow-2xl w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-[400px]" data-aos="fade-up" data-aos-delay="200">
                 <div class="h-48 bg-black/40 flex items-center justify-center text-6xl text-primary/30 group-hover:text-primary transition-all duration-500">
-                    <i class="fas fa-shield-halved"></i>
+                    <i class="fas fa-users"></i>
                 </div>
                 <div class="p-8">
                     <div class="flex gap-2 mb-4">
-                        <span class="text-[10px] font-bold uppercase bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full text-glow">Fivem</span>
+                        <span class="text-[10px] font-bold uppercase bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full">Roleplay</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 tracking-tight text-white">MX Enhanced Roleplay</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Egy Rp szerver ahol te vagy a legfontosabb és a minőséget képviseljük.</p>
+                    <h3 class="text-xl font-bold mb-3 tracking-tight text-white uppercase italic">MX Enhanced</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Prémium minőségű RP szerver egyedi scriptekkel és közösség-központú szemlélettel.</p>
                 </div>
             </div>
-
-            </div>
+        </div>
     </section>
 
     <section id="contact" class="py-24 px-6">
