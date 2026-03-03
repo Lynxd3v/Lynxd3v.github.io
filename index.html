@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="hu" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lynxxx</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00d2ff',
+                        discord: '#5865F2',
+                        darkBg: '#030305',
+                        cardBg: 'rgba(16, 22, 36, 0.6)',
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-15px) rotate(5deg)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body { @apply bg-darkBg text-gray-200 font-['Inter'] overflow-x-hidden; }
+        }
+        .glass { @apply backdrop-blur-xl bg-white/5 border border-white/10 transition-all duration-300; }
+        .text-glow { text-shadow: 0 0 15px rgba(0, 210, 255, 0.5); }
+        #bg-canvas { @apply fixed top-0 left-0 w-full h-full -z-10 bg-[radial-gradient(circle_at_center,_#0a1128_0%,_#030305_100%)]; }
+    </style>
+</head>
+<body>
+
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl glass rounded-full py-4 px-8 flex justify-between items-center z-50 shadow-2xl">
+        <div class="font-extrabold text-primary tracking-widest text-lg italic uppercase">Lynxxx.dev</div>
+        <div class="hidden md:flex space-x-8 font-medium text-sm">
+            <a href="#home" class="hover:text-primary transition-colors">Home</a>
+            <a href="#about" class="hover:text-primary transition-colors">About</a>
+            <a href="#projects" class="hover:text-primary transition-colors">Work</a>
+            <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+        </div>
+    </nav>
+
+    <header id="home" class="h-screen flex flex-col justify-center items-center text-center px-4">
+        <div class="flex flex-col md:flex-row items-center gap-6 mb-8" data-aos="zoom-out" data-aos-duration="1000">
+            <h1 class="text-6xl md:text-9xl font-extrabold tracking-tight order-2 md:order-1 italic">
+                <span class="bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent text-glow uppercase ">Lynxxx</span>
+            </h1>
+            <div class="w-20 h-20 bg-cardBg border border-primary rounded-2xl flex items-center justify-center shadow-[0_0_25px_rgba(0, 210, 255, 0.3)] animate-float order-1 md:order-2">
+                <i class="fas fa-bolt text-3xl text-primary"></i>
+            </div>
+        </div>
+        <p class="max-w-xl text-gray-400 text-lg md:text-xl mb-10" data-aos="fade-up" data-aos-delay="200">
+            Creative Full-Stack Developer & UI Enthusiast. Modern megoldások a digitális jövőnek.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="400">
+            <a href="https://github.com/lynxd3v" target="_blank" class="flex items-center justify-center gap-3 bg-white text-black font-bold py-3 px-8 rounded-full hover:scale-110 transition-transform shadow-lg shadow-white/10">
+                <i class="fab fa-github text-xl"></i> <span>GitHub profil</span>
+            </a>
+            <a href="#projects" class="flex items-center justify-center gap-3 bg-primary/10 border border-primary/50 text-primary font-bold py-3 px-8 rounded-full hover:bg-primary hover:text-black transition-all">
+                <i class="fas fa-code"></i> <span>Munkáim</span>
+            </a>
+        </div>
+    </header>
+
+    <section id="about" class="py-20 px-6 max-w-4xl mx-auto text-center">
+        <div class="glass p-10 rounded-[40px]" data-aos="fade-up">
+            <h2 class="text-2xl font-bold text-primary mb-4 uppercase tracking-widest">Rólam</h2>
+            <p class="text-gray-300 leading-relaxed">
+                Szia! Lynxxx vagyok, egy full-stack fejlesztő, aki imádja az elegáns kódokat és a vizuálisan lenyűgöző felületeket. 
+                Főként FiveM scriptekkel (Lua) és biztonsági automatizációkkal foglalkozom. 
+                Célom, hogy minden projektem gyors, biztonságos és felhasználóbarát legyen.
+            </p>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold inline-block relative after:content-[''] after:absolute after:-bottom-4 after:left-1/2 after:-translate-x-1/2 after:w-12 after:h-1 after:bg-primary after:rounded-full uppercase italic tracking-tighter">
+                Projektjeim
+            </h2>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-8 w-full">
+            
+            <div class="glass rounded-3xl overflow-hidden group hover:-translate-y-3 hover:border-primary/40 shadow-2xl w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-[400px]" data-aos="fade-up">
+                <div class="h-48 bg-black/40 flex items-center justify-center text-6xl text-primary/30 group-hover:text-primary transition-all duration-500">
+                    <i class="fas fa-database"></i>
+                </div>
+                <div class="p-8">
+                    <div class="flex gap-2 mb-4">
+                        <span class="text-[10px] font-bold uppercase bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full text-glow">FiveM</span>
+                        <span class="text-[10px] font-bold uppercase bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full text-glow">Lua</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 tracking-tight text-white">ATLAS DM</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Egy egyedi DM szerver ahol azon dolgozunk hogy mindenki tisztelségesen tudjon játszani.</p>
+                </div>
+            </div>
+
+            <div class="glass rounded-3xl overflow-hidden group hover:-translate-y-3 hover:border-primary/40 shadow-2xl w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-[400px]" data-aos="fade-up" data-aos-delay="200">
+                <div class="h-48 bg-black/40 flex items-center justify-center text-6xl text-primary/30 group-hover:text-primary transition-all duration-500">
+                    <i class="fas fa-shield-halved"></i>
+                </div>
+                <div class="p-8">
+                    <div class="flex gap-2 mb-4">
+                        <span class="text-[10px] font-bold uppercase bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full text-glow">Fivem</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 tracking-tight text-white">MX Enhanced Roleplay</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Egy Rp szerver ahol te vagy a legfontosabb és a minőséget képviseljük.</p>
+                </div>
+            </div>
+
+            </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6">
+        <div class="max-w-2xl mx-auto bg-gradient-to-br from-discord to-[#404eed] p-10 md:p-16 rounded-[40px] text-center shadow-2xl shadow-discord/20 relative overflow-hidden" data-aos="flip-up">
+            <div class="relative z-10 text-white">
+                <i class="fab fa-discord text-6xl mb-6"></i>
+                <h2 class="text-3xl md:text-4xl font-black mb-4 uppercase tracking-tight">Kérdésed van?</h2>
+                <p class="text-white/80 mb-10 text-lg">Dobj egy üzenetet Discordon és válaszolok!</p>
+                <a href="https://discord.com/users/449944273425661953" target="_blank" class="inline-flex items-center gap-3 bg-white text-discord font-extrabold py-4 px-10 rounded-2xl hover:bg-gray-100 hover:scale-105 transition-all shadow-xl uppercase tracking-wider text-sm">
+                    <i class="fas fa-paper-plane"></i> Üzenet küldése
+                </a>
+            </div>
+            <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-black/10 rounded-full blur-3xl"></div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center border-t border-white/5 text-gray-500 text-xs tracking-widest uppercase">
+        <p>© 2026 | Developed by <span class="text-primary font-bold">Lynxxx</span></p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: false });
+
+        // --- PARTICLE BACKGROUND SCRIPT ---
+        const canvas = document.getElementById('bg-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function initCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 1;
+                this.speedX = Math.random() * 0.6 - 0.3;
+                this.speedY = Math.random() * 0.6 - 0.3;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x > canvas.width) this.x = 0;
+                if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0;
+                if (this.y < 0) this.y = canvas.height;
+            }
+            draw() {
+                ctx.fillStyle = 'rgba(0, 210, 255, 0.4)';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function createParticles() {
+            particles = [];
+            const count = window.innerWidth < 768 ? 40 : 100;
+            for (let i = 0; i < count; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => { p.update(); p.draw(); });
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', () => { initCanvas(); createParticles(); });
+        initCanvas(); createParticles(); animate();
+    </script>
+</body>
+</html>
